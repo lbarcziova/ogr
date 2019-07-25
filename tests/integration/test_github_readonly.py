@@ -43,7 +43,3 @@ class ReadOnly(unittest.TestCase):
     def test_create_pr(self):
         pr = self.colin_project.pr_create("title", "text", "master", "souce_branch")
         assert pr.title == "title"
-
-    def test_create_fork(self):
-        fork = self.colin_project.fork_create()
-        assert not fork.is_fork
