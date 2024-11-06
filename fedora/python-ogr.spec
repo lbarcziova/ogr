@@ -38,6 +38,8 @@ One Git library to Rule!
 %pyproject_install
 %pyproject_save_files ogr
 
+mkdir -p %{buildroot}%{_bindir}
+install -m 755 test-for-scan-failure.sh %{buildroot}%{_bindir}/test-for-scan-failure.sh
 
 %files -n python3-ogr -f %{pyproject_files}
 # Epel9 does not tag the license file in pyproject_files as a license. Manually install it in this case
@@ -45,6 +47,7 @@ One Git library to Rule!
 %license LICENSE
 %endif
 %doc README.md
+%{_bindir}/test-for-scan-failure.sh
 
 
 %changelog
