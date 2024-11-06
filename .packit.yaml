@@ -59,11 +59,7 @@ jobs:
     trigger: commit
     branch: main
     targets:
-      - fedora-all
-      - epel-9
-    project: packit-dev
-    list_on_homepage: True
-    preserve_project: True
+      - fedora-rawhide
 
   - job: copr_build
     trigger: commit
